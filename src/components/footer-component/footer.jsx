@@ -1,9 +1,9 @@
 import React from 'react';
 import './footer.css';
 
-const footer = () => (
+const footer = props => (
   <div className="footer">
-    <b>About Us</b>
+    <b>{props.text}</b>
   </div>
 );
 

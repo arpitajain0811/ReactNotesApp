@@ -1,9 +1,9 @@
 import React from 'react';
 import './bodyTitle.css';
 
-const BodyTitle = () => (
+const BodyTitle = props => (
   <div className="noteTitle" >
-    <span><b>Note Title</b></span>
+    <span><b>{props.text}</b></span>
     <button><b>en</b></button>
   </div>
 );

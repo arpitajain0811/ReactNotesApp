@@ -6,9 +6,9 @@ import Note from '../note-component/note';
 
 const body = () => (
   <div className="body">
-    <BodyTitle />
+    <BodyTitle text="Note Title" />
     <Note />
-    <NotesFooter />
+    <NotesFooter number="150" />
   </div>
 );
 

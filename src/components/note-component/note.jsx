@@ -1,7 +1,7 @@
 import React from 'react';
 import './note.css';
 
-const Note = () => (
+const Note = props => (
   <div className="note">
     <div className="headingBox">
       <input type="text" placeholder="Tasks for today" />
