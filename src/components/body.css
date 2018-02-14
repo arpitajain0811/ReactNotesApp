@@ -31,7 +31,7 @@ input{
     padding:10px;
     display:flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: #E9E9EF;
 }
 .note-instruction{
@@ -72,4 +72,9 @@ textarea{
   }
   .note-instruction{
       margin-left:0;
+  }
+  .note{
+      flex-grow: 1;
+      display:flex;
+      flex-direction: column;
   }
