@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../header-component/header';
 import Footer from '../footer-component/footer';
 import Body from '../body-component/body';
-import './board.css';
+import './app.css';
 
 const board = () => (
   <div className="board">

@@ -5,7 +5,7 @@ import NotesFooter from '../notesFooter-component/notesFooter';
 import Note from '../note-component/note';
 
 const body = () => (
-  <div className="Body">
+  <div className="body">
     <BodyTitle />
     <Note />
     <NotesFooter />
