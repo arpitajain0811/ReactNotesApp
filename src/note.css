@@ -1,0 +1,22 @@
+.heading-box{
+    display: flex;
+}
+::placeholder{
+    font-weight: bold;
+    font-size: 14px;
+  }
+  .note-instruction-container{
+      padding:15px;
+      padding-left:0;
+  }
+  .note-instruction{
+      margin-left:0;
+  }
+  textarea{
+    width:100%;
+}
+.Note-area{
+    flex-grow: 1;
+    display: flex;
+    width:100%;
+}
