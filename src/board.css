@@ -1,0 +1,11 @@
+.board{
+    border:1px solid gray;
+    justify-content: center;
+    align-content: center;
+    height:99vh;
+    /* height:500px;
+    width:500px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
