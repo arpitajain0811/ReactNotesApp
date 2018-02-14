@@ -3,14 +3,14 @@ import './note.css';
 
 const Note = () => (
   <div className="note">
-    <div className="heading-box">
+    <div className="headingBox">
       <input type="text" placeholder="Tasks for today" />
     </div>
-    <div className="note-instruction-container">
-      <span className="note-instruction">Please type your note below</span>
+    <div className="noteInstructionContainer">
+      <span className="noteInstruction">Please type your note below</span>
       <i className="fa fa-file-text-o" aria-hidden="true" />
     </div>
-    <div className="Note-area">
+    <div className="noteArea">
       <textarea />
     </div>
   </div>

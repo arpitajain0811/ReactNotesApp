@@ -2,9 +2,9 @@ import React from 'react';
 import './notesFooter.css';
 
 const NotesFooter = () => (
-  <div className="Note-footer">
+  <div className="noteFooter">
     <button className="save"><b>Save</b></button>
-    <span className="Characters">150 characters</span>
+    <span className="characters">150 characters</span>
   </div>
 );
 
