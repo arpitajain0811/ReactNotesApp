@@ -8,7 +8,7 @@ const body = () => (
   <div className="body">
     <BodyTitle text="Note Title" />
     <Note />
-    <NotesFooter number="150" />
+    <NotesFooter number="120" />
   </div>
 );
 

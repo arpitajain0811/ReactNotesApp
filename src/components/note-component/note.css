@@ -36,3 +36,6 @@ input{
     flex-grow: 1;
     border: 1px solid gray;
 } 
+.warning{
+    background-color: red;
+}

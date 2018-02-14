@@ -9,4 +9,3 @@ const BodyTitle = props => (
 );
 
 export default BodyTitle;
-
