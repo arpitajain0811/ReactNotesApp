@@ -6,7 +6,7 @@ import './app.css';
 
 const board = () => (
   <div className="board">
-    <Header text="Tasks for today" />
+    <Header text="Start taking notes" />
     <Body />
     <Footer text="About Us" />
   </div>
