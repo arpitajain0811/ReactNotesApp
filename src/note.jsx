@@ -1,11 +1,8 @@
 import React from 'react';
-import './body.css';
-import BodyTitle from './bodyTitle';
-import NotesFooter from './notesFooter';
+import './note.css';
 
-const body = () => (
-  <div className="Body">
-    <BodyTitle />
+const Note = () => (
+  <div className="note">
     <div className="heading-box">
       <input type="text" placeholder="Tasks for today" />
     </div>
@@ -16,8 +13,7 @@ const body = () => (
     <div className="Note-area">
       <textarea />
     </div>
-    <NotesFooter />
   </div>
 );
 
-export default body;
+export default Note;

@@ -1,0 +1,14 @@
+.Note-footer{
+    display:flex;
+    justify-content: space-between;
+
+}
+.Characters{
+    font-size: 11px;
+    padding-top:20px;
+}
+.save{
+    padding-top:15px;
+    font-size: 13px;
+    border:none;
+}
