@@ -11,8 +11,8 @@ class Note extends React.Component {
   onTextChange(text) {
     this.note = text.target.value;
 
-    if (this.note.length > 120) {
-      this.note = this.note.slice(0, 120);
+    if (this.note.length > 10) {
+      this.note = this.note.slice(0, 10);
       this.setState({
         limit: true,
       });

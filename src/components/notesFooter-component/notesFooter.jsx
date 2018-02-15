@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './notesFooter.css';
 
 function NotesFooter(props) {
@@ -10,3 +11,6 @@ function NotesFooter(props) {
   );
 }
 export default NotesFooter;
+NotesFooter.propTypes = {
+  number: PropTypes.number.isRequired,
+};

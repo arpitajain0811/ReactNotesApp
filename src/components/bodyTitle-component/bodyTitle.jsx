@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './bodyTitle.css';
 
 const BodyTitle = props => (
@@ -9,3 +10,7 @@ const BodyTitle = props => (
 );
 
 export default BodyTitle;
+
+BodyTitle.propTypes = {
+  text: PropTypes.string.isRequired,
+};
