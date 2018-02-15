@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Board from './components/App/app';
+import App from './components/App/App';
 // import registerServiceWorker from './registerServiceWorker';
-const render = () => { ReactDOM.render(<Board />, document.getElementById('root')); };
+const render = () => { ReactDOM.render(<App />, document.getElementById('root')); };
 export default render;
 // registerServiceWorker();

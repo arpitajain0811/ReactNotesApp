@@ -1,41 +1,41 @@
-.headingBox{
+.HeadingBox{
     display: flex;
 }
 ::placeholder{
     font-weight: bold;
     font-size: 14px;
   }
-  .noteInstructionContainer{
-      padding:15px;
-      padding-left:0;
+  .NoteInstructionContainer{
+      padding: 15px;
+      padding-left: 0;
   }
-.noteInstruction{
+.NoteInstruction{
     font-style: italic;
-    font-size:12px;
+    font-size: 12px;
     font-weight: 200;
-    margin-right:5px;
-    margin-left:0;
+    margin-right: 5px;
+    margin-left: 0;
 }
   textarea{
-    width:100%;
+    width: 100%;
 }
-.noteArea{
+.NoteArea{
     flex-grow: 1;
     display: flex;
-    width:100%;
+    width: 100%;
 }
-.note{
+.Note{
     flex-grow: 1;
     display: flex;
     flex-direction: column;
 }
 input{
-    padding:10px;
-    margin-top:15px;
+    padding: 10px;
+    margin-top: 15px;
     margin-bottom: 5px;
     flex-grow: 1;
     border: 1px solid gray;
 } 
-.warning{
+.Warning{
     background-color: red;
 }

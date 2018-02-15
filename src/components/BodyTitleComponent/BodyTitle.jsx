@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './bodyTitle.css';
+import './BodyTitle.css';
 
 const BodyTitle = props => (
   <div className="noteTitle" >

@@ -1,14 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './footer.css';
+import './Header.css';
 
-const footer = props => (
-  <div className="footer">
+
+const Header = props => (
+  <div className="Header">
     <b>{props.text}</b>
   </div>
 );
 
-export default footer;
-footer.propTypes = {
+export default Header;
+
+Header.propTypes = {
   text: PropTypes.string.isRequired,
 };
+
