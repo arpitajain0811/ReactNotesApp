@@ -1,48 +1,33 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './note.css';
 
-class Note extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      limit: false,
-    };
-  }
-  onTextChange(text) {
-    this.note = text.target.value;
-
-    if (this.note.length > 10) {
-      this.note = this.note.slice(0, 10);
-      this.setState({
-        limit: true,
-      });
-    } else {
-      this.setState({
-        limit: false,
-      });
-    }
-  }
-  render() {
-    return (
-      <div className="note">
-        <div className="headingBox">
-          <input type="text" placeholder="Tasks for today" />
-        </div>
-        <div className="noteInstructionContainer">
-          <span className="noteInstruction">Please type your note below</span>
-          <i className="fa fa-file-text-o" aria-hidden="true" />
-        </div>
-        <div className="noteArea">
-          <textarea
-            id="notes"
-            value={this.note}
-            className={this.state.limit ? 'warning' : ''}
-            onChange={text => this.onTextChange(text)}
-          />
-        </div>
-      </div>
-    );
-  }
-}
+const Note = props => (
+  <div className="note">
+    <div className="headingBox">
+      <input type="text" placeholder="Tasks for today" />
+    </div>
+    <div className="noteInstructionContainer">
+      <span className="noteInstruction">Please type your note below</span>
+      <i className="fa fa-file-text-o" aria-hidden="true" />
+    </div>
+    <div className="noteArea">
+      <textarea
+            // id="notes"
+        value={props.note}
+        className={props.limit ? 'warning' : ''}
+        onChange={text => props.func(text)}
+      />
+    </div>
+  </div>
+  //   );
+  // }
+);
 
 export default Note;
+Note.propTypes = {
+  note: PropTypes.string.isRequired,
+  limit: PropTypes.bool.isRequired,
+  func: PropTypes.func.isRequired,
+};
+
