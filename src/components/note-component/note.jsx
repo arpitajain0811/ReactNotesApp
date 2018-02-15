@@ -16,7 +16,7 @@ const Note = props => (
             // id="notes"
         value={props.note}
         className={props.limit ? 'warning' : ''}
-        onChange={text => props.func(text)}
+        onChange={text => props.onChange(text)}
       />
     </div>
   </div>
@@ -28,6 +28,6 @@ export default Note;
 Note.propTypes = {
   note: PropTypes.string.isRequired,
   limit: PropTypes.bool.isRequired,
-  func: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
