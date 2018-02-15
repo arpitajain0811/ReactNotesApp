@@ -4,7 +4,7 @@ import BodyTitle from '../bodyTitle-component/bodyTitle';
 import NotesFooter from '../notesFooter-component/notesFooter';
 import Note from '../note-component/note';
 
-const charLimit = 10;
+const charLimit = 120;
 class Body extends React.Component {
   constructor(props) {
     super(props);
