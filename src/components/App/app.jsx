@@ -2,6 +2,8 @@ import React from 'react';
 import Header from '../HeaderComponent/Header';
 import Footer from '../FooterComponent/Footer';
 import Body from '../BodyComponent/Body';
+import FooterButton from '../FooterComponent/FooterButton';
+import SavedNotes from '../SavedNotesComponent/SavedNotes';
 import './App.css';
 
 const charLimit = 120;
@@ -81,8 +83,12 @@ class App extends React.Component {
     }
     return (
       <div className="Board">
-        <Header text="Start taking notes" />
-        <Footer text="About Us" />
+        <Header text="Saved Notes" />
+        <SavedNotes notesArray={this.state.savedNotes} />
+        <FooterButton
+          text="Create new Note"
+          // onClick={() => { this.changeState(); }}
+        />
       </div>
     );
   }
