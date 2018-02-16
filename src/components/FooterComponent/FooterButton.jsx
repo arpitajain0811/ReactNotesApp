@@ -5,7 +5,7 @@ import './Footer.css';
 const Footer = props => (
   <button
     className="Footer"
-    // onClick={props.onClick()}
+    onClick={() => props.onClick()}
   >
     {props.text}
   </button>
@@ -14,5 +14,5 @@ const Footer = props => (
 export default Footer;
 Footer.propTypes = {
   text: PropTypes.string.isRequired,
-  // onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
