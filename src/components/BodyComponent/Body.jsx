@@ -11,14 +11,13 @@ const Body = props => (
     <Note
       title={props.title}
       note={props.note}
-      // clear={props.clear}
       limit={props.limit}
       onChange={text => props.onTextChange(text)}
       onTitleChange={text => props.onTitleChange(text)}
     />
     <NotesFooter
       onClick={() => { props.saveNote(props.noteTitle, props.noteBody); }}
-      limit={props.charLimit - props.characters}
+      limit={props.characters}
     />
   </div>
 );
@@ -34,6 +33,5 @@ Body.propTypes = {
   saveNote: PropTypes.func.isRequired,
   noteTitle: PropTypes.string.isRequired,
   noteBody: PropTypes.string.isRequired,
-  charLimit: PropTypes.number.isRequired,
   characters: PropTypes.number.isRequired,
 };

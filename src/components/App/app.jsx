@@ -13,10 +13,12 @@ class App extends React.Component {
     this.state = {
       page: false,
       limit: false,
-      characters: 0,
+      characters: charLimit,
       noteTitle: '',
       noteBody: '',
       savedNotes: [],
+      edit:false,
+      id:0,
     };
   }
   onTextChange(text) {
@@ -24,13 +26,13 @@ class App extends React.Component {
       const note = text.target.value.slice(0, charLimit);
       this.setState({
         limit: true,
-        characters: 10,
+        characters: charLimit-note.length,
         noteBody: note,
       });
     } else {
       this.setState({
         limit: false,
-        characters: text.target.length,
+        characters: charLimit-text.target.value.length,
         noteBody: text.target.value,
       });
     }
@@ -41,20 +43,59 @@ class App extends React.Component {
     });
   }
   saveNote=(noteTitle, noteBody) =>{
-    const note = { title: noteTitle, body: noteBody };
+    if(!this.state.edit){
+    const note = {id:this.state.savedNotes.length+1, title: noteTitle, body: noteBody };
     const prevNotes = this.state.savedNotes.slice();
     prevNotes.push(note);
     this.setState({
       savedNotes: prevNotes,
       noteTitle: '',
       noteBody: '',
+      characters: charLimit,
       page:true,
     });
   }
+  else{
+    const noteId=this.state.id;
+    const savedNotesArray=this.state.savedNotes.slice();
+    for(let i=0;i<savedNotesArray.length;i+=1){
+      if(savedNotesArray[i].id===noteId)
+      { 
+        savedNotesArray[i].title=this.state.noteTitle;
+        savedNotesArray[i].body=this.state.noteBody;
+        this.setState({
+          savedNotes:savedNotesArray.slice(),
+          edit:false,
+        page:true,
+      });
+        break;
+      }
+    }
+  }
+  }
   changeState() {
     this.setState({
+      noteTitle:'',
+      noteBody:'',
+      characters:charLimit,
       page: false,
     });
+  }
+  editNote(noteId){
+    const savedNotesArray=this.state.savedNotes.slice();
+    for(let i=0;i<savedNotesArray.length;i+=1){
+      if(savedNotesArray[i].id===noteId)
+      { this.setState({
+        noteTitle:savedNotesArray[i].title,
+        noteBody:savedNotesArray[i].body,
+        characters:charLimit-savedNotesArray[i].body.length,
+        page:false,
+        edit:true,
+        id:noteId,
+      });
+        break;
+      }
+    }
   }
   render() {
     if (!this.state.page) {
@@ -80,7 +121,7 @@ class App extends React.Component {
     return (
       <div className="Board">
         <Header text="Saved Notes" />
-        <SavedNotes notesArray={this.state.savedNotes} />
+        <SavedNotes editNote={(id)=>this.editNote(id)} notesArray={this.state.savedNotes} />
         <FooterButton
           text="Create new Note"
           onClick={() => { this.changeState(); }}

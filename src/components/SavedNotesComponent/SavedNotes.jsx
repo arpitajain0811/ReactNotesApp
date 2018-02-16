@@ -7,6 +7,8 @@ const SavedNotes = (props) => {
   const noteHolder = [];
   for (let i = 0; i < props.notesArray.length; i += 1) {
     noteHolder.push((<NoteBox
+      editNote={id => props.editNote(id)}
+      id={props.notesArray[i].id}
       title={props.notesArray[i].title}
       content={props.notesArray[i].body}
     />
@@ -23,4 +25,5 @@ const SavedNotes = (props) => {
 export default SavedNotes;
 SavedNotes.propTypes = {
   notesArray: PropTypes.string.isRequired,
+  editNote: PropTypes.func.isRequired,
 };
